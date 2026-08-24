@@ -542,6 +542,12 @@
   }
   renderDropdown();
 
+  // Automatically focus the search bar when the page loads,
+  // so you can start typing immediately.
+  window.addEventListener('load', () => {
+    searchInput.focus();
+  });
+
   engineBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     engineDropdown.classList.toggle('open');
